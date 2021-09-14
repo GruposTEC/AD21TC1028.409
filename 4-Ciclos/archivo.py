@@ -11,10 +11,9 @@ Created on Sat Aug 21 20:43:10 2021
 f = open("lista.csv", "r")
 
 for alumno in f:
-
     print(alumno)
-    alumno = alumno[:len(alumno)-1]
-    print(alumno)
-
-
+    if alumno == "Matricula;Correo\n":
+        print("Es igual")
+    else:
+        print("No es igual")
 f.close()
